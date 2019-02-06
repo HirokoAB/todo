@@ -1,0 +1,123 @@
+body{
+    background-color: #edf0f1;
+}
+
+/*header*/
+header{
+    display:flex;
+    justify-content: space-around;
+    padding: 15px;
+    background: #69b7ce;
+}
+
+header input{
+    width:80%;
+    color:#fff;
+    font-size: 15px;
+    text-indent: 18px;
+    border-radius: 25px;
+    background: rgba(225,225,225,.2);
+    border: none;
+}
+
+header{
+    color:#ffffff;
+    cursor:pointer;
+}
+
+
+header input::-webkit-input-placeholder{
+    color:rgba(225,225,225,0.75);
+}
+
+
+header i:hover{
+    opacity: -6;
+}
+
+/*headerここまで*/
+
+.container{
+    padding:25px;
+}
+
+.title{
+    margin:15px 0;
+    padding-right: 3%;
+    color:#777;
+}
+
+/*todo一覧*/
+.list li{
+    font-size: 14px;
+    color: #444;
+    line-height:22px;
+    background-color:#fff; 
+
+    position:relative;
+    margin-bottom: 150px;
+    padding:14px 100px 14px 14px;
+    height: 50px;
+}
+
+.list li :last-child{
+    margin-bottom: 0;
+}
+
+/*右側のボタンたち*/
+.list li .buttons{
+    width:100px;
+    height: 50px;
+    position: absolute;
+    top:0;
+    right: 0;
+}
+
+.list li .buttons button{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border: none;
+    cursor: pointer;
+}
+
+/*ボタンとボタンの境界線*/
+
+.done:before{
+    content:'';
+    width: 1px;
+    height: 30px;
+    background-color: #edf0f1;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+.list .remove{
+    color: #f00;
+}
+
+.list .done{
+    color: blue;
+}
+
+/*完了済み一覧*/
+#not-yet:empty:after{
+    content:'you have nothing to do!';
+}
+
+#done:empty:after{
+    content:'you have yet to complete any tasks!';
+}
+
+ul.list#not-yet:after,
+ul.list#done:after{
+    display:block;
+    text-align:center;
+    font-size:14px;
+    color:#aaa;
+}
+
+
+
+
